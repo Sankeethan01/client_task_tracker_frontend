@@ -1,7 +1,12 @@
 //import Image from "next/image";
 "use client";
 import api from "@/api/route";
-import { Project } from "next/dist/build/swc/types";
+interface Project {
+  id: string;
+  name: string;
+  client?: { name: string };
+  status: string;
+}
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
